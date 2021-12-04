@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,20 +11,27 @@ void main() {
 
 class XylophonePage extends StatelessWidget {
   const XylophonePage({Key? key}) : super(key: key);
+  static AudioCache player = AudioCache();
+
+  playLocal(int num) {
+    player.play('note$num.wav');
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.green.shade900,
       body: SafeArea(
-        child: Row(
+        child: Column(
           children: [
             Expanded(
               child: TextButton(
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  playLocal(1);
+                },
                 child: Container(
                   color: Colors.blue,
                 ),
@@ -34,7 +42,9 @@ class XylophonePage extends StatelessWidget {
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  playLocal(2);
+                },
                 child: Container(
                   color: Colors.yellow,
                 ),
@@ -45,7 +55,9 @@ class XylophonePage extends StatelessWidget {
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  playLocal(3);
+                },
                 child: Container(
                   color: Colors.green,
                 ),
@@ -56,7 +68,9 @@ class XylophonePage extends StatelessWidget {
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  playLocal(4);
+                },
                 child: Container(
                   color: Colors.orange,
                 ),
@@ -67,7 +81,9 @@ class XylophonePage extends StatelessWidget {
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  playLocal(5);
+                },
                 child: Container(
                   color: Colors.purple,
                 ),
@@ -78,7 +94,9 @@ class XylophonePage extends StatelessWidget {
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  playLocal(6);
+                },
                 child: Container(
                   color: Colors.pink,
                 ),
@@ -89,7 +107,9 @@ class XylophonePage extends StatelessWidget {
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  playLocal(7);
+                },
                 child: Container(
                   color: Colors.green,
                 ),
